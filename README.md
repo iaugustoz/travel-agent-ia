@@ -16,7 +16,8 @@ Projeto em andamento.
 
 ### Dependências
 
--
+- [API da OpenAI](https://platform.openai.com/);
+- [Langchain](https://langchain.com/) - framework for developing applications powered by LLMs;
 
 ## Instalando
 
@@ -30,6 +31,20 @@ $ git clone https://github.com/igoraugustobrz/travel-agent-ia
 
 ```
 $ cd travel-agent-ia
+```
+
+3. Instale as libraries abaixo:
+
+```
+pip install openai
+
+pip install langchain
+
+pip install langchain_openai
+
+pip install duckduckgo-search
+
+pip install wikipedia
 ```
 
 ## Contribuindo
