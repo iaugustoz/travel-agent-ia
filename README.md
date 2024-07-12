@@ -40,13 +40,21 @@ pip install openai
 
 pip install langchain
 
-pip install langchain_openai
+pip install langchain-core
+
+pip install langchainhub
+
+pip install langchain-openai
+
+pip install langchain-community
+
+pip install langchain-text-splitters
+
+pip install bs4
 
 pip install duckduckgo-search
 
 pip install wikipedia
-
-pip install langchain
 
 pip install chromadb
 ```
