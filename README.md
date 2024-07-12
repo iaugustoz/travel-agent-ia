@@ -45,6 +45,10 @@ pip install langchain_openai
 pip install duckduckgo-search
 
 pip install wikipedia
+
+pip install langchain
+
+pip install chromadb
 ```
 
 ## Contribuindo
