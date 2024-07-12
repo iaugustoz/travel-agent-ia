@@ -13,18 +13,16 @@ from langchain.core.prompts import PromptTemplate
 
 from langchain.core.runnables import RunnableSequence
 
-llm = ChatOpenAI(model="gpt-3.5-turbo")
+OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 
-query = """
-Vou viajar para Londres em agosto de 2024. Quero que faça um roteiro de viagens para mim com eventos que irão ocorrer na data da viagem e com o preço de passagem de São Paulo para Londres.
-"""
+llm = ChatOpenAI(model="gpt-3.5-turbo")
 
 def researchAgent(query, llm):
   tools = load_tools(['ddg-search', 'wikipedia'], llm=llm)
   prompt = hub.pull("hwchase17/react")
   
   agent = create_react_agent(llm, tools, prompt)
-  agent_executor = AgentExecutor(agent=agent, tools=tools, prompt=prompt, verbose=True)
+  agent_executor = AgentExecutor(agent=agent, tools=tools, prompt=prompt)
   
   webContent = agent_executor.invoke({"input": query})
   return webContent('output')
@@ -77,3 +75,8 @@ def getResponse(query, llm):
   response = supervisorAgent(query, llm, webContext, relevant_documents)
   return response
 
+
+def lambda_handler(event, context):
+  query = event.get("question")
+  response = getResponse(query, llm).content
+  return {"body": response, "status": 200}
