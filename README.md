@@ -2,6 +2,9 @@
 
 ## Descrição
 
+O projeto foi fruto da NLW Journey, um evento de cinco dias de programação.
+
+Desenvolvi um LLM (Large Language Model) que utiliza a API da OpenAI. Este modelo tem a capacidade de abordar eventos futuros de maneira informativa, sempre relacionado ao contexto trabalhado. O objetivo foi me aventurar um pouco mais na área de A.I e aprender um pouco mais acerca dos conceitos.
 
 ## Status do projeto
 
