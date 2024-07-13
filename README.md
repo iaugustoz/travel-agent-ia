@@ -2,7 +2,6 @@
 
 ## Descrição
 
-Descrição em construção.
 
 ## Status do projeto
 
@@ -18,6 +17,7 @@ Projeto concluído.
 
 - [API da OpenAI](https://platform.openai.com/);
 - [Langchain](https://langchain.com/) - framework for developing applications powered by LLMs;
+- ChormaDB - vector database.
 
 ## Instalando
 
