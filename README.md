@@ -6,7 +6,7 @@ Descrição em construção.
 
 ## Status do projeto
 
-Projeto em andamento.
+Projeto concluído.
 
 ## Pré-requisitos
 
